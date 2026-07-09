@@ -9,13 +9,19 @@
 <link href="assets/css/bootstrap-icons.min.css" rel="stylesheet" type="text/css" />
 <link href="assets/css/style.min.css" rel="stylesheet" type="text/css" />
 <meta name="theme-color" content="#ffffff" />
-        <meta name="description" content="Musterbrief nach DIN 5008 – kostenlose Vorlage online ausfüllen. Mit Aufbau-Erklärung (Absender, Empfänger, Betreff, Grußformel) für Behörden und Unternehmen."/>
+<meta id="meta-desc" name="description" content="Musterbrief nach DIN 5008 – kostenlose Vorlage online ausfüllen. Mit Aufbau-Erklärung (Absender, Empfänger, Betreff, Grußformel) für Behörden und Unternehmen."/>
 <link rel="canonical" href="https://www.brief-wechsel.de/vorlagen/musterbrief" />
-<title>Musterbrief – kostenlose Vorlage nach DIN 5008</title>
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.brief-wechsel.de/vorlagen/musterbrief" />
-        <meta property="og:title" content="Musterbrief" />
-        <meta property="og:locale" content="de_DE" />
+<title id="page-title">Musterbrief – kostenlose Vorlage nach DIN 5008</title>
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.brief-wechsel.de/vorlagen/musterbrief" />
+<meta property="og:title" content="Musterbrief" />
+<meta property="og:locale" content="de_DE" />
+<style>
+  .lang-switch { display:inline-flex; border:1px solid var(--bs-border-color); border-radius:.375rem; overflow:hidden; }
+  .lang-switch button { background:transparent; border:0; padding:.25rem .55rem; font-size:.8rem; line-height:1; color:var(--bs-body-color); cursor:pointer; }
+  .lang-switch button.active { background:var(--bs-primary); color:#fff; }
+  .lang-switch button + button { border-left:1px solid var(--bs-border-color); }
+</style>
     </head>
     <body>
         <header>
@@ -27,11 +33,17 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarMain">
             <div class="navbar-nav me-auto">
-                <a class="nav-item nav-link" href="#" title="Vorlagen und Musterschreiben">Vorlagen</a>
-                <a class="nav-item nav-link" href="#" title="Preise fuer den Briefversand">Preise</a>
-                <a class="nav-item nav-link" href="#" title="Weitere Informationen">Wiki</a>
+                <a class="nav-item nav-link" href="#" data-i18n="nav.templates" data-i18n-attr="title">Vorlagen</a>
+                <a class="nav-item nav-link" href="#" data-i18n="nav.pricing" data-i18n-attr="title">Preise</a>
+                <a class="nav-item nav-link" href="#" data-i18n="nav.wiki" data-i18n-attr="title">Wiki</a>
             </div>
-            <a class="btn btn-info btn-sm d-block d-lg-inline mx-auto ms-lg-auto me-lg-0 mt-2 mt-lg-0" href="#" title="Neuen Brief schreiben">Neu</a>
+            <div class="d-flex align-items-center gap-2 ms-lg-auto mt-2 mt-lg-0">
+                <div class="lang-switch" role="group" aria-label="Language">
+                    <button type="button" data-lang="de" class="active" aria-pressed="true">DE</button>
+                    <button type="button" data-lang="en" aria-pressed="false">EN</button>
+                </div>
+                <a class="btn btn-info btn-sm d-block d-lg-inline" href="#" data-i18n="nav.new" data-i18n-attr="title">Neu</a>
+            </div>
         </div>
     </div>
 </nav>
@@ -40,19 +52,19 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
-                                <a href="#" title="Startseite">
+                                <a href="#" data-i18n="bc.home" data-i18n-attr="title" title="Startseite">
                                     <i class="bi bi-house"></i>
                                 </a>
                             </li>
                             <li class="breadcrumb-item">
-                                <a href="#" title="alle Vorlagen und Musterschreiben">Vorlagen</a>
+                                <a href="#" data-i18n="nav.templates" data-i18n-attr="title">Vorlagen</a>
                             </li>
                             <li class="breadcrumb-item active d-none d-sm-block" aria-current="page">
-                                Musterbrief
+                                <span data-i18n="page.h1">Musterbrief</span>
                             </li>
                         </ol>
                     </nav>
-                    <h1>Musterbrief</h1>
+                    <h1 data-i18n="page.h1">Musterbrief</h1>
                 </div>
             </div>
         </header>
@@ -83,22 +95,18 @@
                             </div>
                         </div>
                         <div class="row mt-5 mb-5"><div class="col-10" id="body">
- <p>Sehr geehrte Frau Petra Musterfrau,</p>
- <p>verwenden Sie diese interaktive Vorlage für Ihre Korrespondenz mit Firmen, Behörden und Ämter. Zum Schreiben benötigen Sie nichts weiter als Ihren Browser, die Einhaltung der DIN-Norm ist damit gewährleistet. Formatierungsprobleme, ungewünschte Einrückungen sowie Zeilenumbrüche gehören der Vergangenheit an und Sie können sich ganz Ihrem Anliegen widmen.</p>
+ <p data-i18n="letter.greeting">Sehr geehrte Frau Petra Musterfrau,</p>
+ <p data-i18n="letter.intro">verwenden Sie diese interaktive Vorlage für Ihre Korrespondenz mit Firmen, Behörden und Ämter. Zum Schreiben benötigen Sie nichts weiter als Ihren Browser, die Einhaltung der DIN-Norm ist damit gewährleistet. Formatierungsprobleme, ungewünschte Einrückungen sowie Zeilenumbrüche gehören der Vergangenheit an und Sie können sich ganz Ihrem Anliegen widmen.</p>
  <p></p>
- <p>Dies ist ein Musterbrief. Klicken Sie auf die einzelnen Abschnitte in diesem Brief, um die Angaben zu ändern. Den fertigen Brief können Sie als PDF herunterladen, indem Sie oben auf Drucken klicken.</p>
+ <p data-i18n="letter.hint">Dies ist ein Musterbrief. Klicken Sie auf die einzelnen Abschnitte in diesem Brief, um die Angaben zu ändern. Den fertigen Brief können Sie als PDF herunterladen, indem Sie oben auf Drucken klicken.</p>
 </div></div>
                         <div class="row mt-5 mb-5">
                             <div class="alert alert-warning">
-                                <div class="callout-title">Bitte warten</div>
+                                <div class="callout-title" data-i18n="wait.title">Bitte warten</div>
                                 <div class="callout-content">
-                                    Ihr Brief wird geladen. Sollte diese
-                                    Nachricht nicht in Kürze verschwinden,
-                                    empfehlen wir Ihnen, auch aus
-                                    Sicherheitsgründen, einen modernen Browser
-                                    wie
+                                    <span data-i18n="wait.body-pre">Ihr Brief wird geladen. Sollte diese Nachricht nicht in Kürze verschwinden, empfehlen wir Ihnen, auch aus Sicherheitsgründen, einen modernen Browser wie</span>
                                     <a href="https://www.mozilla.org/de/firefox/new/">Firefox</a>
-                                    oder Chrome zu verwenden.
+                                    <span data-i18n="wait.body-post">oder Chrome zu verwenden.</span>
                                 </div>
                             </div>
                         </div>
@@ -109,14 +117,14 @@
             <section class="bg-body-secondary border-top border-bottom py-3 font-courier">
                 <div class="container">
                     <div class="d-flex align-items-center justify-content-center gap-3 gap-md-4 flex-wrap text-muted">
-                        <span class="text-body"><strong>2&nbsp;Mio.+</strong> erstellte Briefe</span>
+                        <span class="text-body"><strong>2&nbsp;Mio.+</strong> <span data-i18n="trust.letters">erstellte Briefe</span></span>
                         <span class="text-muted d-none d-md-block">✦</span>
                         <span class="d-inline-flex align-items-center gap-2">
-                            <span class="small">Versand mit</span>
+                            <span class="small" data-i18n="trust.ship-via">Versand mit</span>
                             <img src="assets/img/DP-Logo_LM_rgb.svg" class="mb-2" alt="Deutsche Post" style="height: 26px"/>
                         </span>
                         <span class="d-inline-flex align-items-center gap-2">
-                            <span class="small">Zahlung per</span>
+                            <span class="small" data-i18n="trust.pay-with">Zahlung per</span>
                             <img src="assets/img/paypal.svg" class="mb-2" alt="PayPal" style="height: 24px"/>
                         </span>
                         <span class="text-muted d-none d-md-block">✦</span>
@@ -126,16 +134,16 @@
 
             <section class="mt-5 pt-5 pb-5 bg-light prose" id="info">
                 <div class="container">
-                    <h2 class="text-center mb-5">Musterbrief nach DIN 5008</h2>
+                    <h2 class="text-center mb-5" data-i18n="info.h2">Musterbrief nach DIN 5008</h2>
         <div class="row">
             <div class="col-md-6">
-                <h3>Mit Briefwechsel problemlos Gestaltungsregeln befolgen</h3>
-                <p>Der Musterbrief entspricht der DIN 5008, die Schreib- und Gestaltungsregeln in Deutschland festlegt sowie Platzierungen und Zeilenabstände definiert. Sie können den Mustertext durch Ihr eigenes Schreiben ersetzen sowei durch weitere Bausteine - stets unter Einhaltung der Briefnorm - erweitern.</p>
+                <h3 data-i18n="info.rules.h">Mit Briefwechsel problemlos Gestaltungsregeln befolgen</h3>
+                <p data-i18n="info.rules.p">Der Musterbrief entspricht der DIN 5008, die Schreib- und Gestaltungsregeln in Deutschland festlegt sowie Platzierungen und Zeilenabstände definiert. Sie können den Mustertext durch Ihr eigenes Schreiben ersetzen sowei durch weitere Bausteine - stets unter Einhaltung der Briefnorm - erweitern.</p>
             </div>
             <div class="col-md-6">
                 <figure class="text-center">
                     <img src="assets/img/brief_schreiben.jpg" class="img-fluid img-thumbnail" alt="Einen Brief schreiben mit Briefwechsel"/>
-                    <figcaption class="figure-caption">Briefe schreiben mit Briefwechsel</figcaption>
+                    <figcaption class="figure-caption" data-i18n="info.figcap">Briefe schreiben mit Briefwechsel</figcaption>
                 </figure>
             </div>
         </div>
@@ -143,16 +151,16 @@
             </section>
             <section class="mt-5 pb-5">
     <div class="container">
-        <h3>Der Aufbau eines formalen Briefes</h3>
+        <h3 data-i18n="structure.h">Der Aufbau eines formalen Briefes</h3>
         <div class="row">
             <div class="col-md-6">
-                <h4>Absender</h4>
-                <p>Der <a href="#">Briefkopf</a> enthält den Namen und die vollständige Anschrift des Absenders. Zusätzlich können weitere Kontaktmöglichkeiten wie eine Telefonnummer oder E-Mail-Adresse angegeben werden. Die Position des Absenders ist nicht festgelegt. Der Name des Absenders kann links-, mittig oder rechtsbündig in dem Briefkopf erscheinen. Bei geschäftlicher Post ist auch ein Logo möglich.</p>
+                <h4 data-i18n="structure.sender.h">Absender</h4>
+                <p data-i18n-html="structure.sender.p">Der <a href="#">Briefkopf</a> enthält den Namen und die vollständige Anschrift des Absenders. Zusätzlich können weitere Kontaktmöglichkeiten wie eine Telefonnummer oder E-Mail-Adresse angegeben werden. Die Position des Absenders ist nicht festgelegt. Der Name des Absenders kann links-, mittig oder rechtsbündig in dem Briefkopf erscheinen. Bei geschäftlicher Post ist auch ein Logo möglich.</p>
             </div>
             <div class="col-md-6">
-                <h4>Empfänger</h4>
-                <p>Die Empfängeradresse ist so auf der Vorlage positioniert, dass beim Falten entlang der Falzmarken, die Adresse in einem Fensterkuvert erscheint. Die Adresse des Empfängers wird nach dem gleichen Schema eingetragen wie die Absenderadresse, z. B.:</p>
-                <div class="alert alert-info">
+                <h4 data-i18n="structure.recipient.h">Empfänger</h4>
+                <p data-i18n="structure.recipient.p">Die Empfängeradresse ist so auf der Vorlage positioniert, dass beim Falten entlang der Falzmarken, die Adresse in einem Fensterkuvert erscheint. Die Adresse des Empfängers wird nach dem gleichen Schema eingetragen wie die Absenderadresse, z. B.:</p>
+                <div class="alert alert-info" data-i18n-html="structure.recipient.example">
                     Max Mustermann<br>
                     Hauptstrasse 1<br>
                     12345 Berlin
@@ -161,57 +169,57 @@
         </div>
         <div class="row">
             <div class="col-md-6">
-                <h4>Rücksendeadresse</h4>
-                <p>Die Rücksendeanschrift oberhalb des Adressfeldes eines Briefes gewährleistet, dass Ihnen beim Verwenden eines Fensterbriefumschlags der Brief wieder zusgestellt werden kann, falls der eigentliche Adressat von der Post nicht zu ermitteln ist.</p>
+                <h4 data-i18n="structure.return.h">Rücksendeadresse</h4>
+                <p data-i18n="structure.return.p">Die Rücksendeanschrift oberhalb des Adressfeldes eines Briefes gewährleistet, dass Ihnen beim Verwenden eines Fensterbriefumschlags der Brief wieder zusgestellt werden kann, falls der eigentliche Adressat von der Post nicht zu ermitteln ist.</p>
             </div>
             <div class="col-md-6">
-                <h4>Falzmarken</h4>
-                <p>Ein fertiger Brief besitzt am linken Blattrand zwei Falzmarken. Der untere Teil wird so heraufgefaltet, dass die Blattunterkante auf die obere Marke trifft, dann wird an dieser Stelle noch einmal gefaltet. So passt das Schreiben genau in einen Briefumschlag.</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <h4>Ort, Datum</h4>
-                <p>Das Datum wird in der Regel unterhalb des Empfängers und oberhalb des Betreffs platziert. Bei geschäftlichen Briefen sollten Sie zudem auch den Ort angeben:</p>
-                <div class="alert alert-info">Leipzig, 5. Juli 2019</div>
-            </div>
-            <div class="col-md-6">
-                <h4>Unser/Ihr Zeichen</h4>
-                <p>"Unser" und "Ihr" Zeichen sind Geschäftszeichen und werden bei Behörden auch Aktenzeichen genannt. Diese erscheinen oberhalb der Betreffzeile und dienen der Referenzierung eines Geschäftsvorfalls.</p>
+                <h4 data-i18n="structure.fold.h">Falzmarken</h4>
+                <p data-i18n="structure.fold.p">Ein fertiger Brief besitzt am linken Blattrand zwei Falzmarken. Der untere Teil wird so heraufgefaltet, dass die Blattunterkante auf die obere Marke trifft, dann wird an dieser Stelle noch einmal gefaltet. So passt das Schreiben genau in einen Briefumschlag.</p>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
-                <h4>Betreff</h4>
-                <p>Der Betreff fungiert als Überschrift und gibt in einem oder wenigen Worten das Anliegen wider.</p>
+                <h4 data-i18n="structure.date.h">Ort, Datum</h4>
+                <p data-i18n="structure.date.p">Das Datum wird in der Regel unterhalb des Empfängers und oberhalb des Betreffs platziert. Bei geschäftlichen Briefen sollten Sie zudem auch den Ort angeben:</p>
+                <div class="alert alert-info" data-i18n="structure.date.example">Leipzig, 5. Juli 2019</div>
             </div>
             <div class="col-md-6">
-                <h4>Anrede</h4>
-                <p>Bei formellen Briefen wird eine förmliche Anrede verwendet - in Deutschland meist: "Sehr geehrter Herr Mustermann," oder, sofern unbekannt "Sehr geehrte Damen und Herren,". Nach der Anrede setzt man ein Komma.</p>
+                <h4 data-i18n="structure.refs.h">Unser/Ihr Zeichen</h4>
+                <p data-i18n="structure.refs.p">"Unser" und "Ihr" Zeichen sind Geschäftszeichen und werden bei Behörden auch Aktenzeichen genannt. Diese erscheinen oberhalb der Betreffzeile und dienen der Referenzierung eines Geschäftsvorfalls.</p>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
-                <h4>Anlagenvermerk</h4>
-                <p>Liegen dem Schreiben Anlagen bei, wird typischerweise am Ende des Schreibens unter der Grußformel ein Hinweis darauf eingefügt. Die Unterlagen werden entsprechend der angegebenen Reihenfolge sortiert. Zudem können Sie Anlagen auch digital anfügen, die dann im fertigen PDF erscheinen.</p>
+                <h4 data-i18n="structure.subject.h">Betreff</h4>
+                <p data-i18n="structure.subject.p">Der Betreff fungiert als Überschrift und gibt in einem oder wenigen Worten das Anliegen wider.</p>
             </div>
             <div class="col-md-6">
-                <h4>Grußformel</h4>
-                <p>Die Grußformel bei formellen Briefen lautet meist:</p>
-                <div class="alert alert-info">Mit freundlichen Grüßen</div>
-                <p>Nach der Grußformel folgt kein Komma und kein Punkt. Darunter erfolgt Ihre Unterschrift.</p>
+                <h4 data-i18n="structure.salutation.h">Anrede</h4>
+                <p data-i18n="structure.salutation.p">Bei formellen Briefen wird eine förmliche Anrede verwendet - in Deutschland meist: "Sehr geehrter Herr Mustermann," oder, sofern unbekannt "Sehr geehrte Damen und Herren,". Nach der Anrede setzt man ein Komma.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h4 data-i18n="structure.attachments.h">Anlagenvermerk</h4>
+                <p data-i18n="structure.attachments.p">Liegen dem Schreiben Anlagen bei, wird typischerweise am Ende des Schreibens unter der Grußformel ein Hinweis darauf eingefügt. Die Unterlagen werden entsprechend der angegebenen Reihenfolge sortiert. Zudem können Sie Anlagen auch digital anfügen, die dann im fertigen PDF erscheinen.</p>
+            </div>
+            <div class="col-md-6">
+                <h4 data-i18n="structure.closing.h">Grußformel</h4>
+                <p data-i18n="structure.closing.p">Die Grußformel bei formellen Briefen lautet meist:</p>
+                <div class="alert alert-info" data-i18n="structure.closing.example">Mit freundlichen Grüßen</div>
+                <p data-i18n="structure.closing.p2">Nach der Grußformel folgt kein Komma und kein Punkt. Darunter erfolgt Ihre Unterschrift.</p>
             </div>
         </div>
 
-        <p><small>Von der Briefwechsel-Redaktion, zuletzt geprüft Mai 2026.</small></p>
+        <p><small data-i18n="structure.editor-note">Von der Briefwechsel-Redaktion, zuletzt geprüft Mai 2026.</small></p>
                     <div class="callout callout-note mt-5">
-                        <div class="callout-title">Disclaimer</div>
+                        <div class="callout-title" data-i18n="disclaimer.title">Disclaimer</div>
                         <div class="callout-content">
-                            <small>Die Musterschreiben dienen als Formulierungshilfe. Wir übernehmen keine Haftung für die Richtigkeit, Vollständigkeit und Aktualität der bereitgestellten Informationen und Adressen. Die Schreiben sind insbesondere auch allgemeiner Art und stellen keine Rechtsberatung im Einzelfall dar. Zur Lösung von konkreten Rechtsfällen konsultieren Sie bitte einen Rechtsanwalt.</small>
+                            <small data-i18n="disclaimer.body">Die Musterschreiben dienen als Formulierungshilfe. Wir übernehmen keine Haftung für die Richtigkeit, Vollständigkeit und Aktualität der bereitgestellten Informationen und Adressen. Die Schreiben sind insbesondere auch allgemeiner Art und stellen keine Rechtsberatung im Einzelfall dar. Zur Lösung von konkreten Rechtsfällen konsultieren Sie bitte einen Rechtsanwalt.</small>
                         </div>
                     </div>
                     <div class="text-center mt-5">
-                        <a class="btn btn-secondary" href="#" title="Briefvorlagen und Musterbriefe">weitere Vorlagen</a>
+                        <a class="btn btn-secondary" href="#" data-i18n="more-templates">weitere Vorlagen</a>
                     </div>
                 </div>
             </section>
@@ -222,29 +230,26 @@
     <div class="row">
       <div class="col-md-8">
         <ul class="list-inline">
-          <li class="list-inline-item"><a href="#">Über Briefwechsel</a></li>
-          <li class="list-inline-item"><a href="#">Briefvorlagen</a></li>
-          <li class="list-inline-item"><a href="#">FAQ</a></li>
-          <li class="list-inline-item"><a href="#">Impressum</a></li>
-          <li class="list-inline-item"><a href="#">AGB</a></li>
-          <li class="list-inline-item"><a href="#">Datenschutz</a></li>
+          <li class="list-inline-item"><a href="#" data-i18n="footer.about">Über Briefwechsel</a></li>
+          <li class="list-inline-item"><a href="#" data-i18n="footer.templates">Briefvorlagen</a></li>
+          <li class="list-inline-item"><a href="#" data-i18n="footer.faq">FAQ</a></li>
+          <li class="list-inline-item"><a href="#" data-i18n="footer.imprint">Impressum</a></li>
+          <li class="list-inline-item"><a href="#" data-i18n="footer.terms">AGB</a></li>
+          <li class="list-inline-item"><a href="#" data-i18n="footer.privacy">Datenschutz</a></li>
         </ul>
       </div>
       <div class="col-md-4 text-end">
         <ul class="list-inline">
-          <li class="list-inline-item me-2"><img src="assets/img/paypal.svg" alt="PayPal" title="Briefe bezahlen mit PayPal" height="25"></li>
-          <li class="list-inline-item"><img src="assets/img/DP-Logo_LM_rgb.svg" alt="Deutsche Post" title="Briefe verschicken mit Deutsche Post" height="25"></li>
+          <li class="list-inline-item me-2"><img src="assets/img/paypal.svg" alt="PayPal" data-i18n-attr="title" data-i18n="footer.paypal-title" title="Briefe bezahlen mit PayPal" height="25"></li>
+          <li class="list-inline-item"><img src="assets/img/DP-Logo_LM_rgb.svg" alt="Deutsche Post" data-i18n-attr="title" data-i18n="footer.dp-title" title="Briefe verschicken mit Deutsche Post" height="25"></li>
         </ul>
       </div>
     </div>
   </div>
 </footer>
-        <script>
-/* Self-contained FAQ accordion toggler. Mirrors the .collapsed/.show class
-   toggling that re-frame does for the in-app accordion (see preferences.cljs),
-   without any Bootstrap JS. Scoped to .accordion-faq so it never touches the
-   Reagent-managed settings accordion, and it never stops event propagation,
-   so React's synthetic events are unaffected. */
+
+<script>
+/* Self-contained FAQ accordion toggler. */
 (function () {
   if (window.__faqAccordionBound) return;
   window.__faqAccordionBound = true;
@@ -262,11 +267,229 @@
   });
 })();
 </script>
-        <script>
- var d = ["document",{"date":{"val":["missing",null,{}],"visible":true,"rep":["missing",null,{}]},"refline":[],"recipient":{"val":["slate",{"nodes":[{"object":"block","data":{},"type":"paragraph","nodes":[{"object":"text","leaves":[{"object":"leaf","marks":[{"data":{"tag":"foa"},"type":"meta"}],"text":"Frau"},{"object":"leaf","marks":[],"text":" "},{"object":"leaf","marks":[{"data":{"tag":"person"},"type":"meta"}],"text":"Petra Musterfrau"}]}]},{"object":"block","data":{},"type":"paragraph","nodes":[{"object":"text","leaves":[{"object":"leaf","marks":[{"data":{"tag":"street"},"type":"meta"}],"text":"Berliner Straße 10"}]}]},{"object":"block","data":{},"type":"paragraph","nodes":[{"object":"text","leaves":[{"object":"leaf","marks":[{"data":{"tag":"zipcode"},"type":"meta"}],"text":"13591"},{"object":"leaf","marks":[],"text":" "},{"object":"leaf","marks":[{"data":{"tag":"city"},"type":"meta"}],"text":"Berlin"}]}]}],"object":"document","data":{}},{}],"visible":true,"rep":["missing",null,{}]},"opening":{"val":["missing",null,{}],"visible":true,"rep":["missing",null,{}]},"signature-name":{"val":["missing",null,{}],"visible":true,"rep":["missing",null,{}]},"footer":[{"val":["missing",null,{}],"visible":false,"rep":["missing",null,{}]},{"val":["missing",null,{}],"visible":false,"rep":["missing",null,{}]},{"val":["missing",null,{}],"visible":false,"rep":["missing",null,{}]}],"return-address":{"val":["missing",null,{}],"visible":true,"rep":["missing",null,{}]},"sender":{"val":["slate",{"object":"document","data":{},"nodes":[{"object":"block","type":"paragraph","data":{},"nodes":[{"object":"text","leaves":[{"object":"leaf","text":"Peter Mustermann","marks":[{"object":"mark","type":"meta","data":{"tag":"person"}}]}]}]},{"object":"block","type":"paragraph","data":{},"nodes":[{"object":"text","leaves":[{"object":"leaf","text":"Hauptstraße 1","marks":[{"object":"mark","type":"meta","data":{"tag":"street"}}]}]}]},{"object":"block","type":"paragraph","data":{},"nodes":[{"object":"text","leaves":[{"object":"leaf","text":"13591","marks":[{"object":"mark","type":"meta","data":{"tag":"zipcode"}}]},{"object":"leaf","text":" ","marks":[]},{"object":"leaf","text":"Berlin","marks":[{"object":"mark","type":"meta","data":{"tag":"city"}}]}]}]}]},{}],"visible":true,"rep":["missing",null,{}]},"body":{"val":["slate",{"object":"document","data":{},"nodes":[{"object":"block","type":"paragraph","data":{},"nodes":[{"object":"text","leaves":[{"object":"leaf","text":"dies ist ein Musterbrief. Klicken Sie auf die einzelnen Abschnitte in diesem Brief, um die Angaben zu ändern. Den fertigen Brief können Sie als PDF herunterladen, indem Sie oben auf Drucken klicken.","marks":[]}]}]}]},{}],"visible":true,"rep":["missing",null,{}]},"subject":{"val":["slate",{"object":"document","data":{},"nodes":[{"object":"block","type":"paragraph","data":{},"nodes":[{"object":"text","leaves":[{"object":"leaf","text":"Musterbrief","marks":[]}]}]}]},{}],"visible":true,"rep":["missing",null,{}]},"closing":{"val":["slate",{"object":"document","data":{},"nodes":[{"object":"block","type":"paragraph","data":{},"nodes":[{"object":"text","leaves":[{"object":"leaf","text":"Mit freundlichen Grüßen","marks":[]}]}]}]},{}],"visible":true,"rep":["missing",null,{}]}},{"header-alignment":"right","layout":"din","lang":"german"}];
+
+<script id="i18n-dict" type="application/json">
+{
+  "de": {
+    "nav.templates": "Vorlagen",
+    "nav.templates.title": "Vorlagen und Musterschreiben",
+    "nav.pricing": "Preise",
+    "nav.pricing.title": "Preise fuer den Briefversand",
+    "nav.wiki": "Wiki",
+    "nav.wiki.title": "Weitere Informationen",
+    "nav.new": "Neu",
+    "nav.new.title": "Neuen Brief schreiben",
+    "bc.home": "Startseite",
+    "page.title": "Musterbrief – kostenlose Vorlage nach DIN 5008",
+    "page.desc": "Musterbrief nach DIN 5008 – kostenlose Vorlage online ausfüllen. Mit Aufbau-Erklärung (Absender, Empfänger, Betreff, Grußformel) für Behörden und Unternehmen.",
+    "page.h1": "Musterbrief",
+    "wait.title": "Bitte warten",
+    "wait.body-pre": "Ihr Brief wird geladen. Sollte diese Nachricht nicht in Kürze verschwinden, empfehlen wir Ihnen, auch aus Sicherheitsgründen, einen modernen Browser wie",
+    "wait.body-post": "oder Chrome zu verwenden.",
+    "letter.greeting": "Sehr geehrte Frau Petra Musterfrau,",
+    "letter.intro": "verwenden Sie diese interaktive Vorlage für Ihre Korrespondenz mit Firmen, Behörden und Ämter. Zum Schreiben benötigen Sie nichts weiter als Ihren Browser, die Einhaltung der DIN-Norm ist damit gewährleistet. Formatierungsprobleme, ungewünschte Einrückungen sowie Zeilenumbrüche gehören der Vergangenheit an und Sie können sich ganz Ihrem Anliegen widmen.",
+    "letter.hint": "Dies ist ein Musterbrief. Klicken Sie auf die einzelnen Abschnitte in diesem Brief, um die Angaben zu ändern. Den fertigen Brief können Sie als PDF herunterladen, indem Sie oben auf Drucken klicken.",
+    "trust.letters": "erstellte Briefe",
+    "trust.ship-via": "Versand mit",
+    "trust.pay-with": "Zahlung per",
+    "info.h2": "Musterbrief nach DIN 5008",
+    "info.rules.h": "Mit Briefwechsel problemlos Gestaltungsregeln befolgen",
+    "info.rules.p": "Der Musterbrief entspricht der DIN 5008, die Schreib- und Gestaltungsregeln in Deutschland festlegt sowie Platzierungen und Zeilenabstände definiert. Sie können den Mustertext durch Ihr eigenes Schreiben ersetzen sowei durch weitere Bausteine - stets unter Einhaltung der Briefnorm - erweitern.",
+    "info.figcap": "Briefe schreiben mit Briefwechsel",
+    "structure.h": "Der Aufbau eines formalen Briefes",
+    "structure.sender.h": "Absender",
+    "structure.sender.p": "Der <a href=\"#\">Briefkopf</a> enthält den Namen und die vollständige Anschrift des Absenders. Zusätzlich können weitere Kontaktmöglichkeiten wie eine Telefonnummer oder E-Mail-Adresse angegeben werden. Die Position des Absenders ist nicht festgelegt. Der Name des Absenders kann links-, mittig oder rechtsbündig in dem Briefkopf erscheinen. Bei geschäftlicher Post ist auch ein Logo möglich.",
+    "structure.recipient.h": "Empfänger",
+    "structure.recipient.p": "Die Empfängeradresse ist so auf der Vorlage positioniert, dass beim Falten entlang der Falzmarken, die Adresse in einem Fensterkuvert erscheint. Die Adresse des Empfängers wird nach dem gleichen Schema eingetragen wie die Absenderadresse, z. B.:",
+    "structure.recipient.example": "Max Mustermann<br>Hauptstrasse 1<br>12345 Berlin",
+    "structure.return.h": "Rücksendeadresse",
+    "structure.return.p": "Die Rücksendeanschrift oberhalb des Adressfeldes eines Briefes gewährleistet, dass Ihnen beim Verwenden eines Fensterbriefumschlags der Brief wieder zusgestellt werden kann, falls der eigentliche Adressat von der Post nicht zu ermitteln ist.",
+    "structure.fold.h": "Falzmarken",
+    "structure.fold.p": "Ein fertiger Brief besitzt am linken Blattrand zwei Falzmarken. Der untere Teil wird so heraufgefaltet, dass die Blattunterkante auf die obere Marke trifft, dann wird an dieser Stelle noch einmal gefaltet. So passt das Schreiben genau in einen Briefumschlag.",
+    "structure.date.h": "Ort, Datum",
+    "structure.date.p": "Das Datum wird in der Regel unterhalb des Empfängers und oberhalb des Betreffs platziert. Bei geschäftlichen Briefen sollten Sie zudem auch den Ort angeben:",
+    "structure.date.example": "Leipzig, 5. Juli 2019",
+    "structure.refs.h": "Unser/Ihr Zeichen",
+    "structure.refs.p": "\"Unser\" und \"Ihr\" Zeichen sind Geschäftszeichen und werden bei Behörden auch Aktenzeichen genannt. Diese erscheinen oberhalb der Betreffzeile und dienen der Referenzierung eines Geschäftsvorfalls.",
+    "structure.subject.h": "Betreff",
+    "structure.subject.p": "Der Betreff fungiert als Überschrift und gibt in einem oder wenigen Worten das Anliegen wider.",
+    "structure.salutation.h": "Anrede",
+    "structure.salutation.p": "Bei formellen Briefen wird eine förmliche Anrede verwendet - in Deutschland meist: \"Sehr geehrter Herr Mustermann,\" oder, sofern unbekannt \"Sehr geehrte Damen und Herren,\". Nach der Anrede setzt man ein Komma.",
+    "structure.attachments.h": "Anlagenvermerk",
+    "structure.attachments.p": "Liegen dem Schreiben Anlagen bei, wird typischerweise am Ende des Schreibens unter der Grußformel ein Hinweis darauf eingefügt. Die Unterlagen werden entsprechend der angegebenen Reihenfolge sortiert. Zudem können Sie Anlagen auch digital anfügen, die dann im fertigen PDF erscheinen.",
+    "structure.closing.h": "Grußformel",
+    "structure.closing.p": "Die Grußformel bei formellen Briefen lautet meist:",
+    "structure.closing.example": "Mit freundlichen Grüßen",
+    "structure.closing.p2": "Nach der Grußformel folgt kein Komma und kein Punkt. Darunter erfolgt Ihre Unterschrift.",
+    "structure.editor-note": "Von der Briefwechsel-Redaktion, zuletzt geprüft Mai 2026.",
+    "disclaimer.title": "Disclaimer",
+    "disclaimer.body": "Die Musterschreiben dienen als Formulierungshilfe. Wir übernehmen keine Haftung für die Richtigkeit, Vollständigkeit und Aktualität der bereitgestellten Informationen und Adressen. Die Schreiben sind insbesondere auch allgemeiner Art und stellen keine Rechtsberatung im Einzelfall dar. Zur Lösung von konkreten Rechtsfällen konsultieren Sie bitte einen Rechtsanwalt.",
+    "more-templates": "weitere Vorlagen",
+    "footer.about": "Über Briefwechsel",
+    "footer.templates": "Briefvorlagen",
+    "footer.faq": "FAQ",
+    "footer.imprint": "Impressum",
+    "footer.terms": "AGB",
+    "footer.privacy": "Datenschutz",
+    "footer.paypal-title": "Briefe bezahlen mit PayPal",
+    "footer.dp-title": "Briefe verschicken mit Deutsche Post",
+    "doc.de": null,
+    "doc.en": null
+  },
+  "en": {
+    "nav.templates": "Templates",
+    "nav.templates.title": "Templates and sample letters",
+    "nav.pricing": "Pricing",
+    "nav.pricing.title": "Letter shipping prices",
+    "nav.wiki": "Wiki",
+    "nav.wiki.title": "Further information",
+    "nav.new": "New",
+    "nav.new.title": "Write a new letter",
+    "bc.home": "Home",
+    "page.title": "Sample Letter – free DIN 5008 template",
+    "page.desc": "Sample letter (DIN 5008) – a free online template you can fill in. Includes a guide on letter structure (sender, recipient, subject, closing) for official and business use.",
+    "page.h1": "Sample Letter",
+    "wait.title": "Please wait",
+    "wait.body-pre": "Your letter is loading. If this message does not disappear shortly, we recommend — also for security reasons — using a modern browser such as",
+    "wait.body-post": "or Chrome.",
+    "letter.greeting": "Dear Ms. Petra Musterfrau,",
+    "letter.intro": "use this interactive template for your correspondence with companies, authorities and public agencies. All you need to write is your browser; the DIN standard is automatically respected. Formatting issues, unwanted indents and unexpected line breaks are a thing of the past, so you can focus entirely on your message.",
+    "letter.hint": "This is a sample letter. Click on any section in this letter to change its content. You can download the finished letter as a PDF by clicking Print above.",
+    "trust.letters": "letters created",
+    "trust.ship-via": "Shipped via",
+    "trust.pay-with": "Pay with",
+    "info.h2": "Sample letter per DIN 5008",
+    "info.rules.h": "Follow design rules effortlessly with Briefwechsel",
+    "info.rules.p": "The sample letter complies with DIN 5008, the German standard that defines writing and layout rules as well as placement and line spacing. You can replace the sample text with your own letter and extend it with additional building blocks — always while staying compliant with the letter standard.",
+    "info.figcap": "Writing letters with Briefwechsel",
+    "structure.h": "The structure of a formal letter",
+    "structure.sender.h": "Sender",
+    "structure.sender.p": "The <a href=\"#\">letterhead</a> contains the sender's name and full address. Additional contact details such as a phone number or email address can also be included. The sender's position is not fixed; the sender's name may be left-, centre- or right-aligned in the letterhead. For business mail, a logo is also possible.",
+    "structure.recipient.h": "Recipient",
+    "structure.recipient.p": "The recipient address is positioned on the template so that when you fold along the fold marks, the address shows through a window envelope. The recipient address follows the same scheme as the sender address, e.g.:",
+    "structure.recipient.example": "John Sample<br>1 Main Street<br>12345 Berlin",
+    "structure.return.h": "Return address",
+    "structure.return.p": "The return address above the address field of a letter ensures that, when using a window envelope, the letter can be returned to you if the postal service cannot determine the actual addressee.",
+    "structure.fold.h": "Fold marks",
+    "structure.fold.p": "A finished letter has two fold marks along its left edge. The lower part is folded up so the bottom edge meets the upper mark, then folded once more at that point. The letter then fits an envelope exactly.",
+    "structure.date.h": "Place, date",
+    "structure.date.p": "The date is usually placed below the recipient and above the subject line. For business letters you should also include the place:",
+    "structure.date.example": "Leipzig, 5 July 2019",
+    "structure.refs.h": "Our / Your reference",
+    "structure.refs.p": "\"Our\" and \"Your\" reference are business references, also called file numbers by public authorities. They appear above the subject line and are used to reference a business transaction.",
+    "structure.subject.h": "Subject",
+    "structure.subject.p": "The subject acts as a heading and conveys the matter in one or a few words.",
+    "structure.salutation.h": "Salutation",
+    "structure.salutation.p": "Formal letters use a formal salutation — in Germany usually: \"Dear Mr. Sample,\" or, if unknown, \"Dear Sir or Madam,\". A comma follows the salutation.",
+    "structure.attachments.h": "Enclosures note",
+    "structure.attachments.p": "If the letter includes enclosures, a note is typically added at the end below the closing formula. The documents are sorted according to the order given. You can also attach files digitally; they will then appear in the finished PDF.",
+    "structure.closing.h": "Closing formula",
+    "structure.closing.p": "The closing formula for formal letters usually reads:",
+    "structure.closing.example": "Kind regards",
+    "structure.closing.p2": "No comma or full stop follows the closing formula. Your signature goes below it.",
+    "structure.editor-note": "By the Briefwechsel editorial team, last reviewed May 2026.",
+    "disclaimer.title": "Disclaimer",
+    "disclaimer.body": "The sample letters are provided as drafting aids. We accept no liability for the accuracy, completeness or timeliness of the information and addresses provided. The letters are of a general nature and do not constitute legal advice in any specific case. To resolve concrete legal matters, please consult a lawyer.",
+    "more-templates": "more templates",
+    "footer.about": "About Briefwechsel",
+    "footer.templates": "Letter templates",
+    "footer.faq": "FAQ",
+    "footer.imprint": "Imprint",
+    "footer.terms": "Terms",
+    "footer.privacy": "Privacy",
+    "footer.paypal-title": "Pay for letters with PayPal",
+    "footer.dp-title": "Ship letters with Deutsche Post",
+    "doc.de": null,
+    "doc.en": null
+  }
+}
 </script>
-        <script>
-            lom.core.init("app", d);
-        </script>
+
+<script>
+/* i18n runtime. Swaps text/html/title/aria on elements with data-i18n.
+   The editor (`#app`) is React/CLJS-managed, so its rendered output is NOT
+   touched — it loads its own translated copy via window.__DOC_BY_LANG. */
+(function () {
+  var STORAGE_KEY = "bw-lang";
+  var dictEl = document.getElementById("i18n-dict");
+  var dict = JSON.parse(dictEl.textContent);
+  function getLang() {
+    var saved = null;
+    try { saved = localStorage.getItem(STORAGE_KEY); } catch (e) {}
+    if (saved === "de" || saved === "en") return saved;
+    return "de";
+  }
+  function applyLang(lang) {
+    var t = dict[lang] || {};
+    document.documentElement.setAttribute("lang", lang);
+    var titleEl = document.getElementById("page-title");
+    if (titleEl && t["page.title"]) titleEl.textContent = t["page.title"];
+    var descEl = document.getElementById("meta-desc");
+    if (descEl && t["page.desc"]) descEl.setAttribute("content", t["page.desc"]);
+    document.querySelectorAll("[data-i18n]").forEach(function (el) {
+      var key = el.getAttribute("data-i18n");
+      if (!(key in t)) return;
+      var mode = el.hasAttribute("data-i18n-html") ? "html" : "text";
+      if (mode === "html") el.innerHTML = t[key];
+      else el.textContent = t[key];
+    });
+    document.querySelectorAll("[data-i18n-attr]").forEach(function (el) {
+      var attr = el.getAttribute("data-i18n-attr");
+      var key = el.getAttribute("data-i18n");
+      if (!attr || !(key in t)) return;
+      el.setAttribute(attr, t[key]);
+    });
+    document.querySelectorAll(".lang-switch button[data-lang]").forEach(function (b) {
+      var active = b.getAttribute("data-lang") === lang;
+      b.classList.toggle("active", active);
+      b.setAttribute("aria-pressed", active ? "true" : "false");
+    });
+    document.dispatchEvent(new CustomEvent("langchange", { detail: { lang: lang } }));
+  }
+  document.addEventListener("click", function (e) {
+    var btn = e.target.closest && e.target.closest(".lang-switch button[data-lang]");
+    if (!btn) return;
+    var lang = btn.getAttribute("data-lang");
+    try { localStorage.setItem(STORAGE_KEY, lang); } catch (e2) {}
+    applyLang(lang);
+  });
+  window.__applyLang = applyLang;
+  applyLang(getLang());
+})();
+</script>
+
+<script id="doc-de" type="application/json">
+["document",{"date":{"val":["missing",null,{}],"visible":true,"rep":["missing",null,{}]},"refline":[],"recipient":{"val":["slate",{"nodes":[{"object":"block","data":{},"type":"paragraph","nodes":[{"object":"text","leaves":[{"object":"leaf","marks":[{"data":{"tag":"foa"},"type":"meta"}],"text":"Frau"},{"object":"leaf","marks":[],"text":" "},{"object":"leaf","marks":[{"data":{"tag":"person"},"type":"meta"}],"text":"Petra Musterfrau"}]}]},{"object":"block","data":{},"type":"paragraph","nodes":[{"object":"text","leaves":[{"object":"leaf","marks":[{"data":{"tag":"street"},"type":"meta"}],"text":"Berliner Straße 10"}]}]},{"object":"block","data":{},"type":"paragraph","nodes":[{"object":"text","leaves":[{"object":"leaf","marks":[{"data":{"tag":"zipcode"},"type":"meta"}],"text":"13591"},{"object":"leaf","marks":[],"text":" "},{"object":"leaf","marks":[{"data":{"tag":"city"},"type":"meta"}],"text":"Berlin"}]}]}],"object":"document","data":{}},{}],"visible":true,"rep":["missing",null,{}]},"opening":{"val":["missing",null,{}],"visible":true,"rep":["missing",null,{}]},"signature-name":{"val":["missing",null,{}],"visible":true,"rep":["missing",null,{}]},"footer":[{"val":["missing",null,{}],"visible":false,"rep":["missing",null,{}]},{"val":["missing",null,{}],"visible":false,"rep":["missing",null,{}]},{"val":["missing",null,{}],"visible":false,"rep":["missing",null,{}]}],"return-address":{"val":["missing",null,{}],"visible":true,"rep":["missing",null,{}]},"sender":{"val":["slate",{"object":"document","data":{},"nodes":[{"object":"block","type":"paragraph","data":{},"nodes":[{"object":"text","leaves":[{"object":"leaf","text":"Peter Mustermann","marks":[{"object":"mark","type":"meta","data":{"tag":"person"}}]}]}]},{"object":"block","type":"paragraph","data":{},"nodes":[{"object":"text","leaves":[{"object":"leaf","text":"Hauptstraße 1","marks":[{"object":"mark","type":"meta","data":{"tag":"street"}}]}]}]},{"object":"block","type":"paragraph","data":{},"nodes":[{"object":"text","leaves":[{"object":"leaf","text":"13591","marks":[{"object":"mark","type":"meta","data":{"tag":"zipcode"}}]},{"object":"leaf","text":" ","marks":[]},{"object":"leaf","text":"Berlin","marks":[{"object":"mark","type":"meta","data":{"tag":"city"}}]}]}]}]},{}],"visible":true,"rep":["missing",null,{}]},"body":{"val":["slate",{"object":"document","data":{},"nodes":[{"object":"block","type":"paragraph","data":{},"nodes":[{"object":"text","leaves":[{"object":"leaf","text":"dies ist ein Musterbrief. Klicken Sie auf die einzelnen Abschnitte in diesem Brief, um die Angaben zu ändern. Den fertigen Brief können Sie als PDF herunterladen, indem Sie oben auf Drucken klicken.","marks":[]}]}]}]},{}],"visible":true,"rep":["missing",null,{}]},"subject":{"val":["slate",{"object":"document","data":{},"nodes":[{"object":"block","type":"paragraph","data":{},"nodes":[{"object":"text","leaves":[{"object":"leaf","text":"Musterbrief","marks":[]}]}]}]},{}],"visible":true,"rep":["missing",null,{}]},"closing":{"val":["slate",{"object":"document","data":{},"nodes":[{"object":"block","type":"paragraph","data":{},"nodes":[{"object":"text","leaves":[{"object":"leaf","text":"Mit freundlichen Grüßen","marks":[]}]}]}]},{}],"visible":true,"rep":["missing",null,{}]}},{"header-alignment":"right","layout":"din","lang":"german"}]
+</script>
+
+<script id="doc-en" type="application/json">
+["document",{"date":{"val":["missing",null,{}],"visible":true,"rep":["missing",null,{}]},"refline":[],"recipient":{"val":["slate",{"nodes":[{"object":"block","data":{},"type":"paragraph","nodes":[{"object":"text","leaves":[{"object":"leaf","marks":[{"data":{"tag":"foa"},"type":"meta"}],"text":"Ms."},{"object":"leaf","marks":[],"text":" "},{"object":"leaf","marks":[{"data":{"tag":"person"},"type":"meta"}],"text":"Petra Sample"}]}]},{"object":"block","data":{},"type":"paragraph","nodes":[{"object":"text","leaves":[{"object":"leaf","marks":[{"data":{"tag":"street"},"type":"meta"}],"text":"10 Berlin Street"}]}]},{"object":"block","data":{},"type":"paragraph","nodes":[{"object":"text","leaves":[{"object":"leaf","marks":[{"data":{"tag":"zipcode"},"type":"meta"}],"text":"13591"},{"object":"leaf","marks":[],"text":" "},{"object":"leaf","marks":[{"data":{"tag":"city"},"type":"meta"}],"text":"Berlin"}]}]}],"object":"document","data":{}},{}],"visible":true,"rep":["missing",null,{}]},"opening":{"val":["missing",null,{}],"visible":true,"rep":["missing",null,{}]},"signature-name":{"val":["missing",null,{}],"visible":true,"rep":["missing",null,{}]},"footer":[{"val":["missing",null,{}],"visible":false,"rep":["missing",null,{}]},{"val":["missing",null,{}],"visible":false,"rep":["missing",null,{}]},{"val":["missing",null,{}],"visible":false,"rep":["missing",null,{}]}],"return-address":{"val":["missing",null,{}],"visible":true,"rep":["missing",null,{}]},"sender":{"val":["slate",{"object":"document","data":{},"nodes":[{"object":"block","type":"paragraph","data":{},"nodes":[{"object":"text","leaves":[{"object":"leaf","text":"Peter Sample","marks":[{"object":"mark","type":"meta","data":{"tag":"person"}}]}]}]},{"object":"block","type":"paragraph","data":{},"nodes":[{"object":"text","leaves":[{"object":"leaf","text":"1 Main Street","marks":[{"object":"mark","type":"meta","data":{"tag":"street"}}]}]}]},{"object":"block","type":"paragraph","data":{},"nodes":[{"object":"text","leaves":[{"object":"leaf","text":"13591","marks":[{"object":"mark","type":"meta","data":{"tag":"zipcode"}}]},{"object":"leaf","text":" ","marks":[]},{"object":"leaf","text":"Berlin","marks":[{"object":"mark","type":"meta","data":{"tag":"city"}}]}]}]}]},{}],"visible":true,"rep":["missing",null,{}]},"body":{"val":["slate",{"object":"document","data":{},"nodes":[{"object":"block","type":"paragraph","data":{},"nodes":[{"object":"text","leaves":[{"object":"leaf","text":"This is a sample letter. Click on any section in this letter to change its content. You can download the finished letter as a PDF by clicking Print above.","marks":[]}]}]}]},{}],"visible":true,"rep":["missing",null,{}]},"subject":{"val":["slate",{"object":"document","data":{},"nodes":[{"object":"block","type":"paragraph","data":{},"nodes":[{"object":"text","leaves":[{"object":"leaf","text":"Sample letter","marks":[]}]}]}]},{}],"visible":true,"rep":["missing",null,{}]},"closing":{"val":["slate",{"object":"document","data":{},"nodes":[{"object":"block","type":"paragraph","data":{},"nodes":[{"object":"text","leaves":[{"object":"leaf","text":"Kind regards","marks":[]}]}]}]},{}],"visible":true,"rep":["missing",null,{}]}},{"header-alignment":"right","layout":"din","lang":"english"}]
+</script>
+
+<script>
+/* Boot the editor with the document matching the current language, and
+   re-init it (unmount/remount) whenever the user switches language. */
+function bootEditor(lang) {
+  var docEl = document.getElementById(lang === "en" ? "doc-en" : "doc-de");
+  if (!docEl) return;
+  var d = JSON.parse(docEl.textContent);
+  if (typeof lom === "undefined" || !lom.core || !lom.core.init) return;
+  var app = document.getElementById("app");
+  if (app) app.innerHTML = "";
+  lom.core.init("app", d);
+}
+if (typeof lom !== "undefined" && lom.core && lom.core.init) {
+  bootEditor(((function(){try{return localStorage.getItem("bw-lang")||"de";}catch(e){return "de";}})()));
+} else {
+  document.addEventListener("DOMContentLoaded", function () {
+    var lang = "de";
+    try { lang = localStorage.getItem("bw-lang") || "de"; } catch (e) {}
+    bootEditor(lang);
+  });
+}
+document.addEventListener("langchange", function (e) {
+  bootEditor(e.detail.lang);
+});
+</script>
     </body>
 </html>
