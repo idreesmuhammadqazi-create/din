@@ -467,28 +467,96 @@
 </script>
 
 <script>
-/* Boot the editor with the document matching the current language, and
-   re-init it (unmount/remount) whenever the user switches language. */
+/* Intercept server-backed editor endpoints that don't exist in this offline
+   clone:
+     - /app/pdf  : the toolbar's "PDF herunterladen" / Print button. The
+                   original hits the server to render a PDF; here we fall back
+                   to the browser's native print dialog (Save as PDF).
+     - /app/checkout, /app/shared, /app/log : shipping / sharing features.
+   We short-circuit at the fetch layer so the React UI doesn't have to know. */
+(function () {
+  function offlinePdfResponse() {
+    var notice = "PDF generation requires the original server.\n\n" +
+                 "Use your browser's Print dialog (Ctrl/Cmd+P) and choose " +
+                 "\"Save as PDF\" as the destination.";
+    return Promise.resolve({
+      ok: false,
+      status: 501,
+      statusText: "Not Implemented",
+      text: function () { return Promise.resolve(notice); },
+      json: function () { return Promise.reject(new Error(notice)); }
+    });
+  }
+  var origFetch = window.fetch ? window.fetch.bind(window) : null;
+  if (origFetch) {
+    window.fetch = function (input, init) {
+      var url = (typeof input === "string") ? input : (input && input.url) || "";
+      if (url.indexOf("/app/pdf") !== -1) {
+        try { window.print(); } catch (e) {}
+        return offlinePdfResponse();
+      }
+      if (url.indexOf("/app/checkout") !== -1 ||
+          url.indexOf("/app/shared")   !== -1 ||
+          url.indexOf("/app/log")      !== -1) {
+        return offlinePdfResponse();
+      }
+      return origFetch(input, init);
+    };
+  }
+  // XHR path (CLJS often goes through goog.net.XhrIo)
+  var OrigXHR = window.XMLHttpRequest;
+  if (OrigXHR) {
+    var origOpen = OrigXHR.prototype.open;
+    var origSend = OrigXHR.prototype.send;
+    OrigXHR.prototype.open = function (method, url) {
+      this.__bwUrl = url || "";
+      return origOpen.apply(this, arguments);
+    };
+    OrigXHR.prototype.send = function () {
+      if (this.__bwUrl && this.__bwUrl.indexOf("/app/pdf") !== -1) {
+        var self = this;
+        try { window.print(); } catch (e) {}
+        setTimeout(function () {
+          Object.defineProperty(self, "readyState", { get: function () { return 4; } });
+          Object.defineProperty(self, "status",     { get: function () { return 501; } });
+          Object.defineProperty(self, "statusText", { get: function () { return "Not Implemented"; } });
+          Object.defineProperty(self, "responseText", { get: function () {
+            return "PDF generation requires the original server. Use Ctrl/Cmd+P -> Save as PDF.";
+          } });
+          self.onreadystatechange && self.onreadystatechange();
+          self.onload && self.onload();
+        }, 0);
+        return;
+      }
+      return origSend.apply(this, arguments);
+    };
+  }
+})();
+
+/* Boot the editor. lom.core.init stores its React root in a private closure
+   variable and is not designed to be re-run in the same page. The only
+   reliable way to swap the editor's language is a hard reload with the new
+   language saved — the boot script picks it up on the next page load. */
 function bootEditor(lang) {
   var docEl = document.getElementById(lang === "en" ? "doc-en" : "doc-de");
   if (!docEl) return;
   var d = JSON.parse(docEl.textContent);
   if (typeof lom === "undefined" || !lom.core || !lom.core.init) return;
-  var app = document.getElementById("app");
-  if (app) app.innerHTML = "";
-  lom.core.init("app", d);
+  try { lom.core.init("app", d); } catch (e) { console.error("editor init failed:", e); }
+}
+function bootWhenReady() {
+  var lang = "de";
+  try { lang = localStorage.getItem("bw-lang") || "de"; } catch (e) {}
+  bootEditor(lang);
 }
 if (typeof lom !== "undefined" && lom.core && lom.core.init) {
-  bootEditor(((function(){try{return localStorage.getItem("bw-lang")||"de";}catch(e){return "de";}})()));
+  bootWhenReady();
 } else {
-  document.addEventListener("DOMContentLoaded", function () {
-    var lang = "de";
-    try { lang = localStorage.getItem("bw-lang") || "de"; } catch (e) {}
-    bootEditor(lang);
-  });
+  document.addEventListener("DOMContentLoaded", bootWhenReady);
 }
 document.addEventListener("langchange", function (e) {
-  bootEditor(e.detail.lang);
+  // Hard reload so lom.core.init runs fresh with the new document.
+  location.reload();
 });
 </script>
     </body>
