@@ -1,6 +1,6 @@
 var shadow$provide = {};
 
-var shadow$modules = {"uris":{"app":[],"editor":["/js/editor.js"]},"infos":{"app":null,"editor":["app"]}};
+var shadow$modules = {"uris":{"app":[],"editor":["assets/js/editor.js"]},"infos":{"app":null,"editor":["app"]}};
 var $APP = {};
 (function(){
 shadow$provide[0]=function(Ha,Xa,I){function M(U){if(null===U||"object"!==typeof U)return null;U=$a&&U[$a]||U["@@iterator"];return"function"===typeof U?U:null}function W(U,H,Q){this.props=U;this.context=H;this.refs=wb;this.updater=Q||Oa}function Ia(){}function kb(U,H,Q){this.props=U;this.context=H;this.refs=wb;this.updater=Q||Oa}function La(U,H,Q){var Hb,pb={},na=null,ub=null;if(null!=H)for(Hb in void 0!==H.ref&&(ub=H.ref),void 0!==H.key&&(na=""+H.key),H)db.call(H,Hb)&&!gb.hasOwnProperty(Hb)&&(pb[Hb]=
